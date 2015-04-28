@@ -18,11 +18,11 @@ public class WeekOnePie extends PApplet {
         pieChart(300, calcRadiance(values));
     }
 
-    private int[] calcRadiance(double[] values) {
+    private float[] calcRadiance(double[] values) {
         double total = calcTotal(values);
-        int[] newArray = new int[values.length];
+        float[] newArray = new float[values.length];
         for (int i = 0; i < values.length; i++) {
-            newArray[i] = (int) Math.round((360*(values[i]/total)));
+            newArray[i] = (float) (360*(values[i]/total));
         }
         return newArray;
     }
@@ -35,7 +35,7 @@ public class WeekOnePie extends PApplet {
         return total;
     }
 
-    private void pieChart(float diameter, int[] data) {
+    private void pieChart(float diameter, float[] data) {
         float lastAngle = 0;
         for (int i = 0; i < data.length; i++) {
             float gray = map(i, 0, data.length, 0, 255);
