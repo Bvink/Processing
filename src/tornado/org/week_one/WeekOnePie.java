@@ -42,15 +42,17 @@ public class WeekOnePie extends PApplet {
             fill(gray);
             arc(width / 4, height / 2, diameter, diameter, lastAngle, lastAngle + radians(data[i]));
             lastAngle += radians(data[i]);
-            legend(gray, i);
+            legend(gray, i, data[i]);
         }
     }
 
-    private void legend(float gray, int i) {
+    private void legend(float gray, int i, float x) {
         stroke(0);
         fill(gray);
         rect(500, 20+i*20+(40*i), 30, 30);
         fill(0);
-        text(attributes[i], 550, 40+i*20+(40*i));
+        text(attributes[i] + " = " + x/360*100 + "%", 550, 40+i*20+(40*i));
     }
+
+
 }
