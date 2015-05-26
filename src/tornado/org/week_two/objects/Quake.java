@@ -3,14 +3,14 @@ package tornado.org.week_two.objects;
 public class Quake {
 
     private String timestamp;
-    private Float latitude;
-    private Float longitude;
-    private Float depth;
-    private Float size;
-    private Float quality;
+    private double latitude;
+    private double longitude;
+    private double depth;
+    private double size;
+    private double quality;
     private String humanReadableLocation;
 
-    public Quake(String timestamp, Float latitude, Float longitude, Float depth, Float size, Float quality, String humanReadableLocation) {
+    public Quake(String timestamp, double latitude, double longitude, double depth, double size, double quality, String humanReadableLocation) {
         this.timestamp = timestamp;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -28,43 +28,43 @@ public class Quake {
         return timestamp;
     }
 
-    public void setLatitude(Float latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public Float getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLongitude(Float longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
-    public Float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setDepth(Float depth) {
+    public void setDepth(double depth) {
         this.depth = depth;
     }
 
-    public Float getDepth() {
+    public double getDepth() {
         return depth;
     }
 
-    public void setSize(Float size) {
+    public void setSize(Double size) {
         this.size = size;
     }
 
-    public Float getSize() {
+    public double getSize() {
         return size;
     }
 
-    public void setQuality(Float quality) {
+    public void setQuality(Double quality) {
         this.quality = quality;
     }
 
-    public Float getQuality() {
+    public double getQuality() {
         return quality;
     }
 
